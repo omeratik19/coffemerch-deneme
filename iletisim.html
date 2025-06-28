@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim | Coffemerch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: 0;
+        font-family: "Quicksand", Arial, sans-serif;
+        color: #8b7bb8;
+      }
+
+      /* Sayfa içeriklerini başlangıçta gizle */
+      body:not(.content-loaded) > *:not(#page-loader) {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* Sayfa yükleme tamamlandığında içerikleri göster */
+      body.content-loaded > *:not(#page-loader) {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .contact-simple {
+        max-width: 1100px;
+        margin: 60px auto 0 auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+      .contact-simple h4 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: #fff;
+        letter-spacing: 1px;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-simple h1 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+        color: #fff;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-simple .desc {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-cards {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+      .contact-card {
+        flex: 1 1 0;
+        min-width: 220px;
+        max-width: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        padding: 32px 10px 24px 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #f3eaff;
+      }
+      .contact-card:first-child {
+        border-left: none;
+      }
+      .contact-card:last-child {
+        border-right: none;
+      }
+      .contact-card h3,
+      .contact-card p,
+      .contact-social a {
+        color: #f3eaff !important;
+      }
+      .contact-card h3 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-card p {
+        font-size: 1.1rem;
+        margin: 0 0 8px 0;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-social {
+        font-size: 1.7rem;
+        margin-top: 8px;
+      }
+      .contact-social a {
+        color: #111;
+        margin: 0 8px;
+        transition: color 0.2s;
+      }
+      .contact-social a:hover {
+        color: #d4af37;
+      }
+      @media (max-width: 900px) {
+        .contact-cards {
+          flex-direction: column;
+          gap: 0;
+        }
+        .contact-card {
+          border-left: none;
+          border-right: none;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          max-width: 100%;
+        }
+        .contact-card:first-child {
+          border-top: none;
+        }
+        .contact-card:last-child {
+          border-bottom: none;
+        }
+      }
+
+      /* İletişim Formu Stilleri */
+      .contact-form-section {
+        margin-top: 80px;
+        padding: 40px 0;
+        border-top: 1px solid #eee;
+      }
+
+      .contact-form-section h2 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+
+      .form-desc {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 40px;
+        font-family: "Quicksand", Arial, sans-serif;
+      }
+
+      /* Modern form tasarımı */
+      .contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #f3f4f6;
+        padding: 48px 32px 40px 32px;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(76, 68, 182, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .form-row {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 0;
+      }
+      .form-group {
+        flex: 1;
+        margin-bottom: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 18px 16px 10px 16px;
+        border: 1.5px solid #c3bff1;
+        border-radius: 12px;
+        font-size: 1.08rem;
+        background: #fff;
+        color: #8b7bb8;
+        box-shadow: 0 2px 12px rgba(76, 68, 182, 0.07);
+        transition: border 0.2s, box-shadow 0.2s;
+        outline: none;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: #764ba2;
+        box-shadow: 0 4px 18px rgba(118, 75, 162, 0.13);
+      }
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .form-group label {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        color: #8b7bb8;
+        font-size: 1rem;
+        font-weight: 500;
+        pointer-events: none;
+        background: transparent;
+        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+      }
+      .form-group input:focus + label,
+      .form-group input:not(:placeholder-shown) + label,
+      .form-group textarea:focus + label,
+      .form-group textarea:not(:placeholder-shown) + label,
+      .form-group select:focus + label,
+      .form-group select:valid + label {
+        top: -10px;
+        left: 12px;
+        font-size: 0.85rem;
+        color: #764ba2;
+        background: #f3f4f6;
+        padding: 0 6px;
+        border-radius: 8px;
+      }
+      .form-group select {
+        color: #8b7bb8;
+      }
+      .form-group select:invalid {
+        color: #bdbdbd;
+      }
+      .contact-form select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff
+          url('data:image/svg+xml;utf8,<svg fill="%238B7BB8" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+          no-repeat right 16px center/18px 18px;
+      }
+      .submit-btn {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        padding: 18px 0;
+        border-radius: 10px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 0 auto;
+        width: 60%;
+        box-shadow: 0 4px 18px rgba(76, 68, 182, 0.13);
+      }
+      .submit-btn:hover {
+        background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(76, 68, 182, 0.18);
+      }
+      .submit-btn:active {
+        transform: scale(0.98);
+      }
+      .submit-btn i {
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .contact-form {
+          padding: 24px 8px 24px 8px;
+        }
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+        .submit-btn {
+          width: 100%;
+        }
+      }
+
+      /* Sayfa Yükleme Animasyonu - Sadece İletişim Sayfası */
+      #page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100vw;
+        background: #224737;
+        z-index: 9999;
+        animation: pageBarDownUp 3.5s ease-in-out forwards;
+      }
+
+      @keyframes pageBarDownUp {
+        0% {
+          height: 0;
+        }
+        50% {
+          height: 100vh;
+        }
+        100% {
+          height: 0;
+        }
+      }
+
+      #page-loader.hide {
+        display: none;
+      }
+
+      /* Header'ı mat siyah yap */
+      .navbar {
+        background: #2c2c2c !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .hamburger-navigation {
+        background: rgba(44, 44, 44, 0.95) !important;
+      }
+
+      /* Header yazılarını mavi yap */
+      .navbar-text {
+        color: #0085ff !important;
+      }
+
+      .site-menu ul li a {
+        color: #0085ff !important;
+      }
+
+      .site-menu ul li a:hover {
+        color: #ffffff !important;
+      }
+
+      .hamburger-navigation .nav-menu li a {
+        color: #0085ff !important;
+      }
+
+      .hamburger-navigation .nav-menu li a:hover {
+        color: #ffffff !important;
+      }
+
+      @keyframes greenBarUp {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sayfa Yükleme Animasyonu -->
+    <div id="page-loader"></div>
+
+    <div class="contact-simple">
+      <h4>Coffemerch Destek</h4>
+      <h1>Bize Ulaşın</h1>
+      <div class="desc">Tüm soru ve sorunlarınız için her zaman müsaitiz.</div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Hemen Ara</h3>
+          <p>+90 530 655 7210</p>
+        </div>
+        <div class="contact-card">
+          <h3>E-Posta</h3>
+          <p>info@coffemerch.com</p>
+        </div>
+        <div class="contact-card">
+          <h3>Bizi Takip Edin</h3>
+          <div class="contact-social">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            -
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- İletişim Formu -->
+      <div class="contact-form-section">
+        <h2>Mesaj Gönderin</h2>
+        <p class="form-desc">
+          Sorularınız için bize yazın, en kısa sürede dönüş yapalım.
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Ad Soyad *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-posta *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="form-group">
+            <select id="subject" name="subject" required>
+              <option value="">Konu seçiniz</option>
+              <option value="genel">Genel Bilgi</option>
+              <option value="siparis">Sipariş</option>
+              <option value="bayilik">Bayilik</option>
+              <option value="oneri">Öneri/Şikayet</option>
+              <option value="diger">Diğer</option>
+            </select>
+            <label for="subject">Konu *</label>
+          </div>
+
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder=" "
+            ></textarea>
+            <label for="message">Mesajınız *</label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Mesaj Gönder</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Anasayfaya Dön Butonu -->
+    <div style="text-align: center; margin: 60px 0 40px 0">
+      <button
+        id="homeButton"
+        style="
+          background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+          color: #fff;
+          border: none;
+          padding: 16px 32px;
+          border-radius: 10px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-family: 'Quicksand', Arial, sans-serif;
+          box-shadow: 0 4px 18px rgba(76, 68, 182, 0.13);
+        "
+        onmouseover="this.style.transform='translateY(-2px) scale(1.05)'"
+        onmouseout="this.style.transform='translateY(0) scale(1)'"
+      >
+        <i class="fas fa-home" style="margin-right: 8px"></i>
+        Anasayfaya Dön
+      </button>
+    </div>
+
+    <!-- Yeşil Bar Animasyonu -->
+    <div
+      id="greenBar"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #224737;
+        z-index: 9999;
+        display: none;
+      "
+    ></div>
+
+    <script>
+      // Sayfa Yükleme Animasyonu - Kurumsal sayfasındaki gibi
+      window.addEventListener("DOMContentLoaded", function () {
+        var loader = document.getElementById("page-loader");
+        if (loader) {
+          loader.addEventListener("animationend", function () {
+            loader.classList.add("hide");
+            // Sayfa içeriklerini göster
+            document.body.classList.add("content-loaded");
+          });
+        }
+      });
+
+      // Anasayfaya Dön Butonu
+      document
+        .getElementById("homeButton")
+        .addEventListener("click", function () {
+          const greenBar = document.getElementById("greenBar");
+          greenBar.style.display = "block";
+          greenBar.style.animation = "greenBarUp 1.5s ease-in-out forwards";
+
+          setTimeout(function () {
+            window.location.href = "/";
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>

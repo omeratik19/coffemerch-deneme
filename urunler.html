@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürünler | Coffemerch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Sayfa içeriklerini başlangıçta gizle */
+      body:not(.content-loaded) > *:not(#page-loader) {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* Sayfa yükleme tamamlandığında içerikleri göster */
+      body.content-loaded > *:not(#page-loader) {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, #224737 0%, #5f99d2 100%);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Ürün Grid */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 60px 0;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover .product-image {
+        transform: scale(1.05);
+      }
+
+      .product-info {
+        padding: 25px;
+      }
+
+      .product-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #224737;
+        margin-bottom: 10px;
+      }
+
+      .product-description {
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .product-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #5f99d2;
+        margin-bottom: 20px;
+      }
+
+      .product-button {
+        background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .product-button:hover {
+        background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
+        transform: translateY(-2px);
+      }
+
+      /* Kategori Filtreleri */
+      .filters {
+        padding: 40px 0 20px 0;
+        text-align: center;
+      }
+
+      .filter-button {
+        background: white;
+        border: 2px solid #224737;
+        color: #224737;
+        padding: 10px 20px;
+        margin: 0 10px 10px 0;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+      }
+
+      .filter-button.active,
+      .filter-button:hover {
+        background: #224737;
+        color: white;
+      }
+
+      /* Anasayfaya Dön Butonu */
+      .back-home {
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      .back-home-btn {
+        background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
+        color: white;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .back-home-btn:hover {
+        background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
+        transform: translateY(-3px);
+      }
+
+      /* Sayfa Yükleme Animasyonu */
+      #page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100vw;
+        background: #224737;
+        z-index: 9999;
+        animation: pageBarDownUp 3s ease-in-out forwards;
+      }
+
+      @keyframes pageBarDownUp {
+        0% {
+          height: 0;
+        }
+        50% {
+          height: 100vh;
+        }
+        100% {
+          height: 0;
+        }
+      }
+
+      #page-loader.hide {
+        display: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          padding: 40px 0;
+        }
+
+        .filter-button {
+          margin: 0 5px 10px 0;
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sayfa Yükleme Animasyonu -->
+    <div id="page-loader"></div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <h1>Ürünlerimiz</h1>
+        <p>En taze kahve çekirdekleri ve özel harmanlarımız</p>
+      </div>
+    </div>
+
+    <!-- Filtreler -->
+    <div class="filters">
+      <div class="container">
+        <button class="filter-button active" data-category="all">Tümü</button>
+        <button class="filter-button" data-category="coffee">
+          Kahve Çekirdekleri
+        </button>
+        <button class="filter-button" data-category="equipment">
+          Ekipmanlar
+        </button>
+        <button class="filter-button" data-category="accessories">
+          Aksesuarlar
+        </button>
+      </div>
+    </div>
+
+    <!-- Ürünler -->
+    <div class="container">
+      <div class="products-grid">
+        <!-- Kahve Çekirdekleri -->
+        <div class="product-card" data-category="coffee">
+          <img
+            src="images/urun.jpg"
+            alt="Special Blend"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Special Blend</h3>
+            <p class="product-description">
+              Özel harmanımız, en kaliteli çekirdeklerden oluşan eşsiz lezzet.
+            </p>
+            <div class="product-price">₺85.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="coffee">
+          <img
+            src="images/tedarik.jpg"
+            alt="Ethiopia Yirgacheffe"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Ethiopia Yirgacheffe</h3>
+            <p class="product-description">
+              Çiçeksi aromaları ve hafif asiditesi ile özel bir deneyim.
+            </p>
+            <div class="product-price">₺95.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="coffee">
+          <img
+            src="images/hizmet.jpg"
+            alt="Colombia Supremo"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Colombia Supremo</h3>
+            <p class="product-description">
+              Zengin gövdesi ve dengeli lezzeti ile klasik bir seçim.
+            </p>
+            <div class="product-price">₺90.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <!-- Ekipmanlar -->
+        <div class="product-card" data-category="equipment">
+          <img
+            src="images/arastirma.jpg"
+            alt="Kahve Değirmeni"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Kahve Değirmeni</h3>
+            <p class="product-description">
+              Profesyonel kalitede, ayarlanabilir öğütme sistemi.
+            </p>
+            <div class="product-price">₺450.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="equipment">
+          <img
+            src="images/etik.jpg"
+            alt="Espresso Makinesi"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Espresso Makinesi</h3>
+            <p class="product-description">
+              Ev kullanımı için ideal, kompakt tasarım.
+            </p>
+            <div class="product-price">₺1,250.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <!-- Aksesuarlar -->
+        <div class="product-card" data-category="accessories">
+          <img
+            src="images/ilkkart.jpg"
+            alt="Kahve Fincanı Seti"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Kahve Fincanı Seti</h3>
+            <p class="product-description">
+              6'lı set, seramik malzeme, şık tasarım.
+            </p>
+            <div class="product-price">₺180.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <img
+            src="images/danismanlik2.jpg"
+            alt="Kahve Filtresi"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Kahve Filtresi</h3>
+            <p class="product-description">
+              Yeniden kullanılabilir, paslanmaz çelik malzeme.
+            </p>
+            <div class="product-price">₺75.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <img
+            src="images/iletisim.jpg"
+            alt="Kahve Ölçeği"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Kahve Ölçeği</h3>
+            <p class="product-description">
+              Dijital gösterge, hassas ölçüm, kompakt tasarım.
+            </p>
+            <div class="product-price">₺120.00</div>
+            <button class="product-button">Sepete Ekle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anasayfaya Dön -->
+    <div class="back-home">
+      <div class="container">
+        <a href="index.html" class="back-home-btn">
+          <i class="fas fa-home"></i> Anasayfaya Dön
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Sayfa Yükleme Animasyonu
+      window.addEventListener("DOMContentLoaded", function () {
+        var loader = document.getElementById("page-loader");
+        if (loader) {
+          loader.addEventListener("animationend", function () {
+            loader.classList.add("hide");
+            // Sayfa içeriklerini göster
+            document.body.classList.add("content-loaded");
+          });
+        }
+
+        // Filtre Butonları
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const productCards = document.querySelectorAll(".product-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Aktif buton sınıfını güncelle
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Ürünleri filtrele
+            const category = button.getAttribute("data-category");
+
+            productCards.forEach((card) => {
+              if (
+                category === "all" ||
+                card.getAttribute("data-category") === category
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
