@@ -17,8 +17,8 @@
 
       body {
         font-family: "Inter", Arial, sans-serif;
-        background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
-        color: #333;
+        background: #121212 !important;
+        color: #fff;
         line-height: 1.6;
       }
 
@@ -37,7 +37,7 @@
 
       /* Header */
       .header {
-        background: linear-gradient(135deg, #224737 0%, #5f99d2 100%);
+        background: #56453e !important;
         color: white;
         padding: 60px 0;
         text-align: center;
@@ -70,7 +70,7 @@
       }
 
       .product-card {
-        background: white;
+        background: #fff !important;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -101,12 +101,12 @@
       .product-title {
         font-size: 1.4rem;
         font-weight: 600;
-        color: #224737;
+        color: #56453e !important;
         margin-bottom: 10px;
       }
 
       .product-description {
-        color: #666;
+        color: #56453e !important;
         margin-bottom: 15px;
         line-height: 1.6;
       }
@@ -119,8 +119,8 @@
       }
 
       .product-button {
-        background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
-        color: white;
+        background: #56453e !important;
+        color: white !important;
         border: none;
         padding: 12px 25px;
         border-radius: 25px;
@@ -132,8 +132,7 @@
       }
 
       .product-button:hover {
-        background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
-        transform: translateY(-2px);
+        background: #56453e !important;
       }
 
       /* Kategori Filtreleri */
@@ -156,8 +155,8 @@
 
       .filter-button.active,
       .filter-button:hover {
-        background: #224737;
-        color: white;
+        background: #56453e !important;
+        color: white !important;
       }
 
       /* Anasayfaya Dön Butonu */
@@ -167,8 +166,8 @@
       }
 
       .back-home-btn {
-        background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
-        color: white;
+        background: #56453e !important;
+        color: white !important;
         text-decoration: none;
         padding: 15px 30px;
         border-radius: 30px;
@@ -178,8 +177,7 @@
       }
 
       .back-home-btn:hover {
-        background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
-        transform: translateY(-3px);
+        background: #56453e !important;
       }
 
       /* Sayfa Yükleme Animasyonu */
@@ -190,7 +188,7 @@
         right: 0;
         height: 0;
         width: 100vw;
-        background: #224737;
+        background: #56453e;
         z-index: 9999;
         animation: pageBarDownUp 3s ease-in-out forwards;
       }
@@ -228,6 +226,22 @@
           padding: 8px 15px;
           font-size: 0.9rem;
         }
+      }
+
+      #page-close-loader {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #56453e;
+        z-index: 99999;
+        transform: translateY(100%);
+        transition: transform 1.225s cubic-bezier(0.77, 0, 0.18, 1);
+        pointer-events: none;
+      }
+      #page-close-loader.active {
+        transform: translateY(0);
       }
     </style>
   </head>
@@ -398,7 +412,7 @@
     <!-- Anasayfaya Dön -->
     <div class="back-home">
       <div class="container">
-        <a href="index.html" class="back-home-btn">
+        <a href="/" class="back-home-btn">
           <i class="fas fa-home"></i> Anasayfaya Dön
         </a>
       </div>

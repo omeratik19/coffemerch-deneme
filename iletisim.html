@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #121212 !important;
         margin: 0;
         font-family: "Quicksand", Arial, sans-serif;
         color: #8b7bb8;
@@ -40,12 +40,15 @@
         margin: 60px auto 0 auto;
         padding: 0 20px;
         text-align: center;
+        background: #121212 !important;
+        color: #56453e !important;
+        padding-bottom: 60px;
       }
       .contact-simple h4 {
         font-size: 1.1rem;
         font-weight: 400;
         margin-bottom: 10px;
-        color: #fff;
+        color: #56453e !important;
         letter-spacing: 1px;
         font-family: "Quicksand", Arial, sans-serif;
       }
@@ -54,11 +57,11 @@
         font-weight: 600;
         margin-bottom: 12px;
         letter-spacing: 1px;
-        color: #fff;
+        color: #56453e !important;
         font-family: "Quicksand", Arial, sans-serif;
       }
       .contact-simple .desc {
-        color: #fff;
+        color: #56453e !important;
         font-size: 1.1rem;
         margin-bottom: 40px;
         font-family: "Quicksand", Arial, sans-serif;
@@ -72,12 +75,14 @@
         flex-wrap: wrap;
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
+        background: transparent;
       }
       .contact-card {
         flex: 1 1 0;
         min-width: 220px;
         max-width: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #fff !important;
+        color: #56453e !important;
         border-left: none;
         border-right: none;
         box-shadow: none;
@@ -87,7 +92,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #f3eaff;
+        border-radius: 16px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
       }
       .contact-card:first-child {
         border-left: none;
@@ -96,9 +102,8 @@
         border-right: none;
       }
       .contact-card h3,
-      .contact-card p,
-      .contact-social a {
-        color: #f3eaff !important;
+      .contact-card p {
+        color: #56453e !important;
       }
       .contact-card h3 {
         font-size: 1.3rem;
@@ -109,19 +114,30 @@
       .contact-card p {
         font-size: 1.1rem;
         margin: 0 0 8px 0;
+        font-weight: bold;
         font-family: "Quicksand", Arial, sans-serif;
+      }
+      .contact-card:nth-child(1) p, /* Numara */
+      .contact-card:nth-child(2) p, /* E-posta */
+      .contact-social a,
+      .contact-social a i {
+        color: #56453e !important;
       }
       .contact-social {
         font-size: 1.7rem;
         margin-top: 8px;
       }
       .contact-social a {
-        color: #111;
+        color: #56453e !important;
         margin: 0 8px;
         transition: color 0.2s;
       }
       .contact-social a:hover {
         color: #d4af37;
+      }
+      .contact-social a i {
+        color: #56453e !important;
+        font-size: 1.5rem;
       }
       @media (max-width: 900px) {
         .contact-cards {
@@ -148,18 +164,23 @@
         margin-top: 80px;
         padding: 40px 0;
         border-top: 1px solid #eee;
+        background: transparent;
+        color: #56453e !important;
+        margin-top: 40px;
+        border-radius: 16px;
+        padding: 32px 0;
       }
 
       .contact-form-section h2 {
         font-size: 2.2rem;
         font-weight: 600;
         margin-bottom: 10px;
-        color: #fff;
+        color: #56453e !important;
         font-family: "Quicksand", Arial, sans-serif;
       }
 
       .form-desc {
-        color: #fff;
+        color: #56453e !important;
         font-size: 1rem;
         margin-bottom: 40px;
         font-family: "Quicksand", Arial, sans-serif;
@@ -169,13 +190,15 @@
       .contact-form {
         max-width: 800px;
         margin: 0 auto;
-        background: #f3f4f6;
+        background: #fff !important;
         padding: 48px 32px 40px 32px;
         border-radius: 18px;
         box-shadow: 0 8px 32px rgba(76, 68, 182, 0.1);
         display: flex;
         flex-direction: column;
         gap: 28px;
+        padding: 32px 24px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
       }
       .form-row {
         display: flex;
@@ -197,8 +220,8 @@
         border: 1.5px solid #c3bff1;
         border-radius: 12px;
         font-size: 1.08rem;
-        background: #fff;
-        color: #8b7bb8;
+        background: #f8f8f8;
+        color: #56453e;
         box-shadow: 0 2px 12px rgba(76, 68, 182, 0.07);
         transition: border 0.2s, box-shadow 0.2s;
         outline: none;
@@ -217,9 +240,9 @@
         position: absolute;
         left: 18px;
         top: 18px;
-        color: #8b7bb8;
+        color: #56453e !important;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
         pointer-events: none;
         background: transparent;
         transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -240,7 +263,7 @@
         border-radius: 8px;
       }
       .form-group select {
-        color: #8b7bb8;
+        color: #56453e;
       }
       .form-group select:invalid {
         color: #bdbdbd;
@@ -254,8 +277,8 @@
           no-repeat right 16px center/18px 18px;
       }
       .submit-btn {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        background: #56453e !important;
+        color: #fff !important;
         border: none;
         padding: 18px 0;
         border-radius: 10px;
@@ -272,7 +295,7 @@
         box-shadow: 0 4px 18px rgba(76, 68, 182, 0.13);
       }
       .submit-btn:hover {
-        background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+        background: #3d322a !important;
         transform: translateY(-2px) scale(1.03);
         box-shadow: 0 8px 32px rgba(76, 68, 182, 0.18);
       }
@@ -303,7 +326,7 @@
         right: 0;
         height: 0;
         width: 100vw;
-        background: #224737;
+        background: #56453e !important;
         z-index: 9999;
         animation: pageBarDownUp 3.5s ease-in-out forwards;
       }
@@ -363,6 +386,29 @@
           height: 100vh;
         }
       }
+
+      /* Anasayfaya Dön butonu kahverengi */
+      #homeButton {
+        background: #56453e !important;
+        color: #fff !important;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Quicksand", Arial, sans-serif;
+        box-shadow: 0 4px 18px rgba(76, 68, 182, 0.13);
+      }
+      #homeButton:hover {
+        background: #3d322a !important;
+      }
+
+      /* Kapanış efekti kahverengi */
+      #greenBar {
+        background: #56453e !important;
+      }
     </style>
   </head>
   <body>
@@ -385,9 +431,13 @@
         <div class="contact-card">
           <h3>Bizi Takip Edin</h3>
           <div class="contact-social">
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            -
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a
+              href="https://www.instagram.com/coffemerch/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>

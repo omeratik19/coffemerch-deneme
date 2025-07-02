@@ -109,8 +109,9 @@ body.content-loaded > *:not(#page-loader) {
 
 /* Hero Section */
 .hero {
-  min-height: 60vh;
-  background: linear-gradient(120deg, #224737 60%, #5f99d2 100%);
+  min-height: 0.31vh;
+  padding: 0.25px 0 0.25px 0;
+  background: #56453e !important;
   color: #fff;
   display: flex;
   align-items: center;
@@ -142,8 +143,8 @@ body.content-loaded > *:not(#page-loader) {
 }
 
 .hero .btn {
-  background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
-  color: #fff;
+  background: #56453e !important;
+  color: #fff !important;
   padding: 14px 38px;
   border-radius: 32px;
   font-size: 1.1rem;
@@ -156,7 +157,8 @@ body.content-loaded > *:not(#page-loader) {
 }
 
 .hero .btn:hover {
-  background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
+  background: #56453e !important;
+  color: #fff !important;
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -167,6 +169,8 @@ body.content-loaded > *:not(#page-loader) {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  background: #121212 !important;
+  color: #fff !important;
 }
 
 .content-grid {
@@ -177,7 +181,8 @@ body.content-loaded > *:not(#page-loader) {
 }
 
 .content-card {
-  background: white;
+  background: #224737 !important;
+  color: #fff !important;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -202,8 +207,9 @@ body.content-loaded > *:not(#page-loader) {
 
 /* Metin Blokları */
 .text-block {
+  background: #224737 !important;
+  color: #fff !important;
   padding: 40px;
-  background: white;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
@@ -230,7 +236,7 @@ body.content-loaded > *:not(#page-loader) {
 .text-block p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -544,7 +550,7 @@ body.content-loaded > *:not(#page-loader) {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #224737 0%, #1a2a22 100%);
+  background: #56453e !important;
 }
 
 .Header_hasImage__pycJJ {
@@ -630,7 +636,8 @@ body.content-loaded > *:not(#page-loader) {
 }
 
 .PostColumn_column__1g_r4 {
-  background: white;
+  background: #121212 !important;
+  color: #fff !important;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -656,7 +663,8 @@ body.content-loaded > *:not(#page-loader) {
 
 /* Text Blocks - Mevcut Class'ları Override */
 .Textblock_textblock__c2aSt {
-  background: white;
+  background: #121212 !important;
+  color: #fff !important;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -684,7 +692,7 @@ body.content-loaded > *:not(#page-loader) {
 .Textblock_textblock__c2aSt p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -853,19 +861,20 @@ body.content-loaded > *:not(#page-loader) {
 
 /* HAKKIMIZDA */
 .about {
-  background: #fff;
+  background: #121212 !important;
+  color: #fff !important;
   padding: 64px 0 48px 0;
   text-align: center;
 }
 .about h2 {
   font-size: 2.2rem;
-  color: #224737;
+  color: #fff;
   margin-bottom: 18px;
   font-weight: 700;
 }
 .about p {
   font-size: 1.15rem;
-  color: #444;
+  color: #fff;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
@@ -883,7 +892,8 @@ body.content-loaded > *:not(#page-loader) {
   flex-wrap: wrap;
 }
 .vision-mission .card {
-  background: #fff;
+  background: #121212 !important;
+  color: #fff !important;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(34, 71, 55, 0.07);
   padding: 36px 28px;
@@ -898,25 +908,26 @@ body.content-loaded > *:not(#page-loader) {
   box-shadow: 0 8px 32px rgba(34, 71, 55, 0.13);
 }
 .vision-mission h3 {
-  color: #224737;
+  color: #fff;
   font-size: 1.3rem;
   margin-bottom: 14px;
   font-weight: 700;
 }
 .vision-mission p {
-  color: #444;
+  color: #fff;
   font-size: 1.08rem;
 }
 
 /* TAKIMIMIZ */
 .team {
-  background: #fff;
+  background: #121212 !important;
+  color: #fff !important;
   padding: 64px 0 48px 0;
   text-align: center;
 }
 .team h2 {
   font-size: 2.1rem;
-  color: #224737;
+  color: #fff;
   margin-bottom: 32px;
   font-weight: 700;
 }
@@ -927,7 +938,8 @@ body.content-loaded > *:not(#page-loader) {
   flex-wrap: wrap;
 }
 .team-card {
-  background: #f8fafc;
+  background: #fff !important;
+  color: #222 !important;
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(34, 71, 55, 0.07);
   padding: 28px 18px 18px 18px;
@@ -950,13 +962,13 @@ body.content-loaded > *:not(#page-loader) {
   border: 3px solid #5f99d2;
 }
 .team-card h4 {
-  color: #224737;
+  color: #222 !important;
   font-size: 1.1rem;
   margin-bottom: 6px;
   font-weight: 700;
 }
 .team-card p {
-  color: #555;
+  color: #222 !important;
   font-size: 0.98rem;
 }
 
@@ -1002,7 +1014,7 @@ body.content-loaded > *:not(#page-loader) {
 
 /* FOOTER */
 .footer {
-  background: #224737;
+  background: #121212;
   color: #fff;
   text-align: center;
   padding: 24px 0 18px 0;
@@ -1052,10 +1064,10 @@ body.content-loaded > *:not(#page-loader) {
   justify-content: center;
   margin: 0;
   padding: 32px 0 0 0;
-  background: transparent;
+  background: #121212 !important;
 }
 .back-home {
-  background: linear-gradient(90deg, #224737 0%, #5f99d2 100%);
+  background: #56453e !important;
   color: #fff;
   padding: 14px 38px;
   border-radius: 32px;
@@ -1070,7 +1082,7 @@ body.content-loaded > *:not(#page-loader) {
   display: inline-block;
 }
 .back-home:hover {
-  background: linear-gradient(90deg, #5f99d2 0%, #224737 100%);
+  background: #56453e !important;
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -1082,7 +1094,7 @@ body.content-loaded > *:not(#page-loader) {
   right: 0;
   height: 0;
   width: 100vw;
-  background: #224737;
+  background: #56453e;
   z-index: 9999;
   animation: pageBarDownUp 3s ease-in-out forwards;
 }
@@ -1105,7 +1117,7 @@ body.content-loaded > *:not(#page-loader) {
   left: 0;
   width: 100%;
   height: 0;
-  background: #224737;
+  background: #56453e;
   z-index: 9999;
   display: none;
 }
@@ -1132,4 +1144,16 @@ body.content-loaded > *:not(#page-loader) {
   .back-home-wrapper {
     padding-top: 18px;
   }
+}
+
+/* 'Bizi Tanıyın' butonu */
+.btn.bizi-taniyin {
+  background: #56453e !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+.btn.bizi-taniyin:hover {
+  background: #56453e !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
 }

@@ -18,7 +18,28 @@ body {
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #fff !important;
+  background: #224737 !important;
+}
+
+body,
+.about-section,
+.lezzet-section,
+.history-section,
+.team-section,
+.values-section,
+.products-section,
+.news-section,
+.container,
+.header,
+.navbar,
+.hero {
+  background: #224737 !important;
+  color: #fff !important;
+}
+
+body * {
+  color: #fff !important;
 }
 
 .container {
@@ -30,7 +51,7 @@ body {
 /* Top Bar */
 .top-bar {
   background: #333;
-  color: #fff;
+  color: #224737;
   padding: 8px 0;
   font-size: 14px;
 }
@@ -52,7 +73,7 @@ body {
 }
 
 .social-links-top a {
-  color: #fff;
+  color: #224737;
   font-size: 16px;
   transition: color 0.3s ease;
 }
@@ -379,19 +400,19 @@ body {
 
 .btn-outline {
   background: transparent;
-  color: #fff;
+  color: #224737;
   border: 2px solid #fff;
 }
 
 .btn-outline:hover {
-  background: #fff;
+  background: #224737;
   color: #333;
 }
 
 /* Lezzet Section */
 .lezzet-section {
   padding: 80px 0;
-  background: #fff;
+  background: #224737;
   position: relative;
 }
 
@@ -457,7 +478,7 @@ body {
 /* About Section */
 .about-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #224737;
   position: relative;
 }
 
@@ -524,7 +545,7 @@ body {
 /* History Section */
 .history-section {
   padding: 80px 0;
-  background: #fff;
+  background: #224737;
   position: relative;
 }
 
@@ -580,7 +601,7 @@ body {
 .quality-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #d4af37 0%, #c19b2e 100%);
-  color: #fff;
+  color: #224737;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -616,7 +637,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #fff;
+  background: #224737;
 }
 
 .quality-content p {
@@ -631,7 +652,7 @@ body {
 /* Turkey Section */
 .turkey-section {
   padding: 80px 0;
-  background: #fff;
+  background: #224737;
   position: relative;
 }
 
@@ -727,7 +748,7 @@ body {
 /* Products Section */
 .products-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #224737;
   position: relative;
 }
 
@@ -748,7 +769,7 @@ body {
 }
 
 .product-card {
-  background: #fff;
+  background: #224737;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -799,7 +820,7 @@ body {
 /* News Section */
 .news-section {
   padding: 80px 0;
-  background: #fff;
+  background: #224737;
   position: relative;
 }
 
@@ -821,7 +842,7 @@ body {
 }
 
 .news-card {
-  background: #f8f9fa;
+  background: #224737;
   border-radius: 15px;
   padding: 30px;
   transition: all 0.3s ease;
@@ -837,7 +858,7 @@ body {
 
 .news-tag {
   background: #d4af37;
-  color: #fff;
+  color: #224737;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 12px;
@@ -866,7 +887,7 @@ body {
 /* Recipe Section */
 .recipe-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #224737;
   position: relative;
 }
 
@@ -885,7 +906,7 @@ body {
 }
 
 .recipe-card {
-  background: #fff;
+  background: #224737;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -985,7 +1006,7 @@ body {
   left: 0;
   width: 60px;
   height: 3px;
-  background: #fff;
+  background: #224737;
 }
 
 .call-center-image {
@@ -1377,7 +1398,7 @@ body {
 /* Values Section */
 .values-section {
   padding: 100px 0;
-  background: #fff;
+  background: #224737;
 }
 
 .values-grid {
@@ -1390,7 +1411,7 @@ body {
 .value-card {
   text-align: center;
   padding: 40px 30px;
-  background: #f9f9f9;
+  background: #224737;
   border-radius: 15px;
   transition: all 0.3s ease;
   position: relative;
@@ -1454,7 +1475,7 @@ body {
 /* History Section */
 .history-section {
   padding: 100px 0;
-  background: #f9f9f9;
+  background: #224737;
 }
 
 .history-content {
@@ -1542,7 +1563,7 @@ body {
 /* Team Section */
 .team-section {
   padding: 100px 0;
-  background: #fff;
+  background: #224737;
 }
 
 .team-grid {
@@ -1553,7 +1574,7 @@ body {
 }
 
 .team-card {
-  background: #f9f9f9;
+  background: #224737;
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -1608,7 +1629,7 @@ body {
 /* Certificates Section */
 .certificates-section {
   padding: 100px 0;
-  background: #f9f9f9;
+  background: #224737;
 }
 
 .certificates-grid {
@@ -1621,7 +1642,7 @@ body {
 .certificate-item {
   text-align: center;
   padding: 30px 20px;
-  background: #fff;
+  background: #224737;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -1756,4 +1777,45 @@ body {
   .certificates-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.values-section,
+.team-section,
+.certificates-section,
+.mission-section,
+.history-section,
+.product-card,
+.team-card,
+.value-card,
+.certificate-item,
+.stat-item,
+.container,
+.products-grid {
+  background: #224737 !important;
+}
+
+section[style*="#f8f9fa"],
+section[style*="#f9f9f9"],
+section[style*="#f8fafc"],
+section[style*="#e9ecef"],
+section[style*="#fafafa"],
+section[style*="#f3f4f6"] {
+  background: #000 !important;
+}
+
+.about-section,
+.history-section,
+.products-section,
+.news-section {
+  background: #000 !important;
+}
+
+.main-slider,
+.swiper-wrapper,
+.swiper-slide,
+.slide-inner,
+.slider {
+  background: #000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
