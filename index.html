@@ -1,447 +1,662 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
-
-<head>
-    <base href="/">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#c5ad86" />
     <title>Coffemerch</title>
-    <meta name="author" content="Coffemerch">
+    <meta name="author" content="Coffemerch" />
 
     <!-- SOCIAL MEDIA META -->
-    <meta property="og:description" content="Coffemerch - Taze Kahve Çekirdekleri ve Ekipmanları">
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="Coffemerch">
-    <meta property="og:title" content="Coffemerch">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://coffemerch.com">
+    <meta
+      property="og:description"
+      content="Coffemerch - Taze Kahve Çekirdekleri ve Ekipmanları"
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Coffemerch" />
+    <meta property="og:title" content="Coffemerch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coffemerch.com" />
     <!-- TWITTER META -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@coffemerch">
-    <meta name="twitter:creator" content="@coffemerch">
-    <meta name="twitter:title" content="Coffemerch">
-    <meta name="twitter:description" content="Coffemerch - Taze Kahve Çekirdekleri ve Ekipmanları">
-    <meta name="twitter:image" content="https://coffemerch.com/preview.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@coffemerch" />
+    <meta name="twitter:creator" content="@coffemerch" />
+    <meta name="twitter:title" content="Coffemerch" />
+    <meta
+      name="twitter:description"
+      content="Coffemerch - Taze Kahve Çekirdekleri ve Ekipmanları"
+    />
+    <meta name="twitter:image" content="https://coffemerch.com/preview.png" />
     <!-- FAVICON FILES -->
 
-    <link href="https://sariyerborek.com/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-    <link href="https://sariyerborek.com/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="https://sariyerborek.com/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="https://sariyerborek.com/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
-    <link href="https://sariyerborek.com/ico/favicon.png" rel="shortcut icon">
+    <link
+      href="https://sariyerborek.com/ico/apple-touch-icon-144-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://sariyerborek.com/ico/apple-touch-icon-114-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="https://sariyerborek.com/ico/apple-touch-icon-72-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://sariyerborek.com/ico/apple-touch-icon-57-precomposed.png"
+      rel="apple-touch-icon"
+    />
+    <link href="https://sariyerborek.com/ico/favicon.png" rel="shortcut icon" />
     <!-- CSS FILES -->
 
+    <link rel="stylesheet" href="https://sariyerborek.com/css/lineicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://sariyerborek.com/css/datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://sariyerborek.com/css/fancybox.min.css"
+    />
+    <link rel="stylesheet" href="https://sariyerborek.com/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://sariyerborek.com/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://sariyerborek.com/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <link rel="stylesheet" href="https://sariyerborek.com/css/lineicons.css">
-    <link rel="stylesheet" href="https://sariyerborek.com/css/datepicker.min.css">
-    <link rel="stylesheet" href="https://sariyerborek.com/css/fancybox.min.css">
-    <link rel="stylesheet" href="https://sariyerborek.com/css/swiper.min.css">
-    <link rel="stylesheet" href="https://sariyerborek.com/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://sariyerborek.com/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-</head>
-
-<body style="background:#000 !important; color:#fff !important;" class="page-loaded">
+  <body
+    style="background: #000 !important; color: #fff !important"
+    class="page-loaded"
+  >
     <div class="cursor js-cursor"></div>
 
     <!-- end page-transition -->
-    <main id="main" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none; background:#000 !important;">
-        <nav class="hamburger-navigation">
-            <div class="layer"></div>
-            <!-- end layer -->
-            <div class="container">
-                <ul class="nav-menu">
-                    <li>
-                        <a href="/">Anasayfa</a>
-                    </li>
-                    <li>
-                        <a href="urunler.html">Ürünler</a>
-                    </li>
-                    <li>
-                        <a href="kurumsal.html">Kurumsal</a>
-                    </li>
-                    <li>
-                        <a href="iletisim.html">İletişim</a>
-                    </li>
-                </ul>
-                <div class="info-box">
-                    <span>Bizi Sosyal Medyada Takip Edin</span>
-                    <ul class="nav-social">
-                        
+    <main
+      id="main"
+      data-scrollbar="true"
+      tabindex="-1"
+      style="overflow: hidden; outline: none; background: #000 !important"
+    >
+      <nav class="hamburger-navigation">
+        <div class="layer"></div>
+        <!-- end layer -->
+        <div class="container">
+          <ul class="nav-menu">
+            <li>
+              <a href="/">Anasayfa</a>
+            </li>
+            <li>
+              <a href="urunler.html">Ürünler</a>
+            </li>
+            <li>
+              <a href="kurumsal.html">Kurumsal</a>
+            </li>
+            <li>
+              <a href="iletisim.html">İletişim</a>
+            </li>
+          </ul>
+          <div class="info-box">
+            <span>Bizi Sosyal Medyada Takip Edin</span>
+            <ul class="nav-social">
+              <li>
+                <a
+                  href="https://www.facebook.com/share/p/14ZxDovEfp/?mibextid=WC7FNe"
+                >
+                  <i class="lni lni-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/trhsariyerborek/status/1866889753053790311?s=48&amp;t=G6nNI2auD6VGXUfpdjEjjQ"
+                >
+                  <i class="lni lni-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/12902583/admin/dashboard/"
+                >
+                  <i class="lni lni-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/tarihisariyerborektr/">
+                  <i class="lni lni-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end info-box -->
+        </div>
+        <!-- end container -->
+      </nav>
+      <!-- end hamburger-navigation -->
+      <nav class="navbar">
+        <div class="container">
+          <div class="logo">
+            <a href="/">
+              <img src="images/logo.png" alt="Coffemerch Logo" />
+            </a>
+          </div>
+          <!-- end logo -->
+          <div class="navbar-text">Müşteri Hizmetleri: 0850 123 4567</div>
+          <!-- end navbar-text -->
+          <div class="site-menu">
+            <ul>
+              <li>
+                <a href="urunler.html">Ürünler</a>
+              </li>
+              <li>
+                <a href="kurumsal.html">Kurumsal</a>
+              </li>
+              <li>
+                <a href="iletisim.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+          <!-- end site-menu -->
+          <div class="hamburger-menu">
+            <button class="menu">
+              <svg width="45" height="45" viewBox="0 0 100 100">
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- end hamburger-menu -->
+        </div>
+        <!-- end container -->
+      </nav>
+      <!-- end navbar -->
+      <header class="slider">
+        <div class="main-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-inner" data-background="images/slider1.jpeg">
+                <div class="container">
+                  <img
+                    src="images/kenar-logo.png"
+                    alt=""
+                    data-swiper-parallax="200"
+                    style="max-height: 160px"
+                  />
 
-                        
-
-                                                <li>
-                            <a href="https://www.facebook.com/share/p/14ZxDovEfp/?mibextid=WC7FNe">
-                                <i class="lni lni-facebook"></i>
-                            </a>
-                            
-                        </li>
-                                                                                                <li>
-                            <a href="https://x.com/trhsariyerborek/status/1866889753053790311?s=48&amp;t=G6nNI2auD6VGXUfpdjEjjQ">
-                                <i class="lni lni-twitter"></i>
-                            </a>
-                            
-                        </li>
-                                                                                                <li>
-                            <a href="https://www.linkedin.com/company/12902583/admin/dashboard/">
-                                <i class="lni lni-linkedin"></i>
-                            </a>
-                            
-                        </li>
-                                                                                                <li>
-                            <a href="https://www.instagram.com/tarihisariyerborektr/">
-                                <i class="lni lni-instagram"></i>
-                            </a>
-                            
-                        </li>
-                                                        
-
-                    </ul>
+                  <h6 data-swiper-parallax="100">Kahvenin Gerçek Adresi</h6>
+                  <h1 data-swiper-parallax="200">Coffemerch</h1>
+                  <p data-swiper-parallax="300">
+                    En taze kahve çekirdekleri ve özel harmanlarımızla, kahve
+                    tutkunlarını buluşturuyoruz.
+                  </p>
+                  <a href="#kesfet-hedef" data-swiper-parallax="200">Keşfet</a>
+                  <a href="iletisim.html" data-swiper-parallax="200"
+                    >Danışmanlık Başvurusu</a
+                  >
                 </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-inner" data-background="images/slider2.jpeg">
+                <div class="container">
+                  <img
+                    src="images/kenar-logo.png"
+                    alt=""
+                    data-swiper-parallax="200"
+                    style="max-height: 160px"
+                  />
+
+                  <h6 data-swiper-parallax="100">Coffemerch Lezzeti</h6>
+                  <h1 data-swiper-parallax="200">Türkiye'nin Her Yerinde!</h1>
+                  <a href="iletisim.html" data-swiper-parallax="200"
+                    >Danışmanlık Başvurusu</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end swiper-wrapper -->
+          <div class="slider-prev"></div>
+          <!-- end slider-prev -->
+          <div class="slider-next"></div>
+          <!-- end slider-next -->
+          <div class="slider-fraction"></div>
+          <!-- end slider-fraction -->
+        </div>
+        <!-- end main-slider -->
+        <div class="scroll-down"></div>
+        <!-- end scroll-down -->
+      </header>
+
+      <!-- end content-section -->
+      <section
+        class="content-section"
+        id="kesfet-bolumu"
+        style="
+          margin-top: 100px;
+          margin-bottom: 0px !important;
+          background: #000 !important;
+        "
+      >
+        <div class="container">
+          <div class="row no-gutters align-items-center">
+            <div class="col-12">
+              <div class="section-title text-center">
+                <h6>Coffemerch</h6>
+                <h2>Bizi yakından tanıyın.</h2>
+              </div>
+              <!-- end section-title -->
+            </div>
+            <!-- end col-12 -->
+            <div class="col-lg-6">
+              <figure class="side-image left-align reveal-effect">
+                <img
+                  src="images/hakkimizda.png"
+                  alt="Image"
+                  style="max-height: 680px; object-fit: cover"
+                />
+              </figure>
+            </div>
+            <!-- end col-6 -->
+            <div class="col-lg-6">
+              <div class="side-hotel-box right" id="kesfet-hedef">
+                <div class="review">
+                  <i class="lni lni-star-filled"></i>
+                  <i class="lni lni-star-filled"></i>
+                  <i class="lni lni-star-filled"></i>
+                  <i class="lni lni-star-filled"></i>
+                  <i class="lni lni-star-filled"></i>
+                </div>
+                <!-- end -->
+                <h2>Kahveyle Hayata Tat Katın</h2>
+                <p>
+                  Her biri özenle seçilmiş, taze kavrulmuş kahve çekirdeklerimiz
+                  ve ekipmanlarımızla, Türkiye'nin dört bir yanındaki
+                  kahveseverlere aynı kaliteyi sunuyoruz.<br />Ayrıca,
+                  sektördeki deneyimimizle işletmelere özel danışmanlık
+                  hizmetleri de sunuyor, kahve sektöründe büyümek isteyen
+                  girişimcilere yol arkadaşlığı yapıyoruz.<br />Size en yakın
+                  satış noktamızı keşfetmek için satış noktaları sayfamıza göz
+                  atın.
+                </p>
+                <a
+                  href="/lezzet-noktalari"
+                  class="custom-button"
+                  style="
+                    background: #56453e !important;
+                    color: #fff !important;
+                    border: 2px solid #fff !important;
+                  "
+                  >Satış Noktalarımız</a
+                >
                 <!-- end info-box -->
-            </div>
-            <!-- end container -->
-        </nav>
-        <!-- end hamburger-navigation -->
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="/">
-                        <img src="images/logo.png" alt="Coffemerch Logo">
-                    </a>
-                </div>
-                <!-- end logo -->
-                <div class="navbar-text">Müşteri Hizmetleri: 0850 123 4567</div>
-                <!-- end navbar-text -->
-                <div class="site-menu">
-                    <ul>
-                        <li>
-                            <a href="urunler.html">Ürünler</a>
-                        </li>
-                        <li>
-                            <a href="kurumsal.html">Kurumsal</a>
-                        </li>
-                        <li>
-                            <a href="iletisim.html">İletişim</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- end site-menu -->
-                <div class="hamburger-menu">
-                    <button class="menu">
-                        <svg width="45" height="45" viewBox="0 0 100 100">
-                            <path class="line line1"
-                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                            <path class="line line2" d="M 20,50 H 80" />
-                            <path class="line line3"
-                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- end hamburger-menu -->
-            </div>
-            <!-- end container -->
-        </nav>
-        <!-- end navbar -->
-<header class="slider">
-    <div class="main-slider">
-        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                    <div class="slide-inner" data-background="images/slider1.jpeg">
-                        <div class="container">
-                            <img src="images/kenar-logo.png" alt="" data-swiper-parallax="200" style="max-height:160px">
-
-
-                                                            <h6 data-swiper-parallax="100">Kahvenin Gerçek Adresi</h6>
-                                                                                        <h1 data-swiper-parallax="200">Coffemerch</h1>
-                                                                                        <p data-swiper-parallax=300>En taze kahve çekirdekleri ve özel harmanlarımızla, kahve tutkunlarını buluşturuyoruz.</p>
-                                                                                        <a href="#kesfet-hedef" data-swiper-parallax="200">Keşfet</a>
-                                                                                        <a href="iletisim.html" data-swiper-parallax="200">Danışmanlık Başvurusu</a>
-                                                    </div>
-                    </div>
-                </div>
-                            <div class="swiper-slide">
-                    <div class="slide-inner" data-background="images/slider2.jpeg">
-
-                        <div class="container">
-                            <img src="images/kenar-logo.png" alt="" data-swiper-parallax="200" style="max-height:160px">
-
-
-                                                            <h6 data-swiper-parallax="100">Coffemerch Lezzeti</h6>
-                                                                                        <h1 data-swiper-parallax="200">Türkiye'nin Her Yerinde!</h1>
-                                                                                                                    <a href="iletisim.html" data-swiper-parallax="200">Danışmanlık Başvurusu</a>
-                                                                                </div>
-                    </div>
-                </div>
-            
-
-        </div>
-        <!-- end swiper-wrapper -->
-        <div class="slider-prev"></div>
-        <!-- end slider-prev -->
-        <div class="slider-next"></div>
-        <!-- end slider-next -->
-        <div class="slider-fraction"></div>
-        <!-- end slider-fraction -->
-    </div>
-    <!-- end main-slider -->
-    <div class="scroll-down"></div>
-    <!-- end scroll-down -->
-</header>
-
-<!-- end content-section -->
-<section class="content-section" id="kesfet-bolumu" style="margin-top:100px;margin-bottom:0px !important; background:#000 !important;">
-    <div class="container">
-        <div class="row no-gutters align-items-center">
-            <div class="col-12">
-                <div class="section-title text-center">
-                    <h6>Coffemerch</h6>
-                                            <h2>Bizi yakından tanıyın.</h2>
-                                    </div>
-                <!-- end section-title -->
-            </div>
-            <!-- end col-12 -->
-            <div class="col-lg-6">
-                <figure class="side-image left-align reveal-effect">
-                    <img src="images/hakkimizda.png" alt="Image" style="max-height:680px;object-fit:cover">
-                </figure>
+              </div>
+              <!-- end side-content -->
             </div>
             <!-- end col-6 -->
-            <div class="col-lg-6">
-                <div class="side-hotel-box right" id="kesfet-hedef">
-                    <div class="review">
-                        <i class="lni lni-star-filled"></i>
-                        <i class="lni lni-star-filled"></i>
-                        <i class="lni lni-star-filled"></i>
-                        <i class="lni lni-star-filled"></i>
-                        <i class="lni lni-star-filled"></i>
-                    </div>
-                    <!-- end -->
-                                            <h2>Kahveyle Hayata Tat Katın</h2>
-                                                                <p>Her biri özenle seçilmiş, taze kavrulmuş kahve çekirdeklerimiz ve ekipmanlarımızla, Türkiye'nin dört bir yanındaki kahveseverlere aynı kaliteyi sunuyoruz.<br>Ayrıca, sektördeki deneyimimizle işletmelere özel danışmanlık hizmetleri de sunuyor, kahve sektöründe büyümek isteyen girişimcilere yol arkadaşlığı yapıyoruz.<br>Size en yakın satış noktamızı keşfetmek için satış noktaları sayfamıza göz atın.</p>
-                                                                <a href="/lezzet-noktalari" class="custom-button" style="background:#56453E !important; color:#fff !important; border:2px solid #fff !important;">Satış Noktalarımız</a>
-                                        <!-- end info-box -->
-
-                </div>
-                <!-- end side-content -->
-            </div>
-            <!-- end col-6 -->
+          </div>
+          <!-- end row -->
         </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-<section class="content-section no-spacing" data-background="#000" style="background:#000 !important;">
-    <div class="container">
-        <div class="row no-gutters align-items-center">
+        <!-- end container -->
+      </section>
+      <section
+        class="content-section no-spacing"
+        data-background="#000"
+        style="background: #000 !important"
+      >
+        <div class="container">
+          <div class="row no-gutters align-items-center">
             <div class="col-lg-6">
-                <div class="side-content light text-left" style="background:#000 !important;">
-                    <h6>Coffemerch</h6>
-                    <h2>Türkiye'nin her yerinde aynı tazelik!</h2>
-                    <p>Geniş ürün yelpazemiz, taze çekirdeklerimiz ve kahve ekipmanlarımızla, yıllardır değişmeyen müşteri memnuniyetiyle hizmetinizdeyiz. Tüm ürünlerimiz, deneyimli ekibimiz tarafından özenle hazırlanıp, Türkiye'nin her yerinden ulaşabileceğiniz satış noktalarımızda sizlere sunuluyor.</p>
-                    <a href="iletisim.html" class="custom-button" style="background:#56453E !important; color:#fff !important;">Danışmanlık Başvurusu</a>
-                </div>
+              <div
+                class="side-content light text-left"
+                style="background: #000 !important"
+              >
+                <h6>Coffemerch</h6>
+                <h2>Türkiye'nin her yerinde aynı tazelik!</h2>
+                <p>
+                  Geniş ürün yelpazemiz, taze çekirdeklerimiz ve kahve
+                  ekipmanlarımızla, yıllardır değişmeyen müşteri memnuniyetiyle
+                  hizmetinizdeyiz. Tüm ürünlerimiz, deneyimli ekibimiz
+                  tarafından özenle hazırlanıp, Türkiye'nin her yerinden
+                  ulaşabileceğiniz satış noktalarımızda sizlere sunuluyor.
+                </p>
+                <a
+                  href="iletisim.html"
+                  class="custom-button"
+                  style="background: #56453e !important; color: #fff !important"
+                  >Danışmanlık Başvurusu</a
+                >
+              </div>
             </div>
             <div class="col-lg-6">
-                <div class="modern-video-box" style="display:flex;align-items:center;justify-content:center;height:100%;">
-                    <video src="images/arka-video.mp4" autoplay muted loop playsinline style="width:100%;max-width:600px;min-height:340px;display:block;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.12);"></video>
-                </div>
+              <div
+                class="modern-video-box"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+                "
+              >
+                <video
+                  src="images/arka-video.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  style="
+                    width: 100%;
+                    max-width: 600px;
+                    min-height: 340px;
+                    display: block;
+                    border-radius: 16px;
+                    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+                  "
+                ></video>
+              </div>
             </div>
+          </div>
+          <!-- end row -->
         </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-<section class="content-section">
-    <div class="container">
-        <div class="row">
+        <!-- end container -->
+      </section>
+      <section class="content-section">
+        <div class="container">
+          <div class="row">
             <div class="col-12">
-                <div class="section-title">
-                    <h6>Coffemerch</h6>
-                                            <h2>Hizmetlerimiz</h2>
-                                    </div>
-                <!-- end section-title -->
+              <div class="section-title">
+                <h6>Coffemerch</h6>
+                <h2>Hizmetlerimiz</h2>
+              </div>
+              <!-- end section-title -->
             </div>
             <!-- end col-12 -->
             <div class="col-12">
-                <div class="carousel-image-box">
-                    <div class="swiper-wrapper">
-                                                <a href='/urunler/special-blend' class="swiper-slide">
-                            <figure class="reveal-effect">
-                                <img src="images/hizmetler1.jpeg" alt="Image"
-            style="max-height:450px;object-fit:cover">
-                            <figcaption>
-                                <h5>Kahve Çekirdeği</h5>
-                            </figcaption>
-                        </figure>
-                        </a>
-                                                <a href='/urunler/ethiopia-yirgacheffe' class="swiper-slide">
-                            <figure class="reveal-effect">
-                                <img src="images/hizmetler2.jpeg" alt="Image"
-            style="max-height:450px;object-fit:cover">
-                        
-                                <h5>Ethiopia Yirgacheffe</h5>
-                            </figcaption>
-                        </figure>
-                        </a>
-                                                <a href='/urunler/colombia-supremo' class="swiper-slide">
-                            <figure class="reveal-effect">
-                                <img src="images/hizmetler3.jpeg" alt="Image"
-            style="max-height:450px;object-fit:cover">
-                            <figcaption>
-                                <h5>Barista Eğitimi</h5>
-                            </figcaption>
-                        </figure>
-                        </a>
-
-                        
-                    </div>
-                </div>
-                <!-- end carousel-image-box -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-            <!-- end col-12 -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
-
-<section class="content-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title text-center">
-            <h6>Coffemerch</h6>
-            <h2>Haberler / Duyurular</h2>
-          </div>
-          <!-- end section-title --> 
-        </div>
-        <!-- end col-12 -->
-                <div class="col-md-4">
-          <div class="recent-news">
-            <figure class="reveal-effect animated"><img src="images/danismanlik2.jpg" alt="Kahve Tadım Etkinliği"></figure>
-            <div class="content">
-              <ul>
-                <li><a href="javascript:void(0)">HABER</a></li>
-              </ul>
-              <span>28.03.2025</span>
-              <h2><a href="/haber-duyuru/5" style="color:#fff !important;">Kahve Tadım Etkinliği</a></h2>
-            </div>
-            <!-- end content --> 
-          </div>
-          <!-- end recent-news --> 
-        </div>
-                <div class="col-md-4">
-          <div class="recent-news">
-            <figure class="reveal-effect animated"><img src="images/iletisim.jpg" alt="Yeni Çekirdekler Stokta"></figure>
-            <div class="content">
-              <ul>
-                <li><a href="javascript:void(0)">HABER</a></li>
-              </ul>
-              <span>28.12.2024</span>
-              <h2><a href="/haber-duyuru/4" style="color:#fff !important;">Yeni Çekirdekler Stokta</a></h2>
-            </div>
-            <!-- end content --> 
-          </div>
-          <!-- end recent-news --> 
-        </div>
-                <div class="col-md-4">
-          <div class="recent-news">
-            <figure class="reveal-effect animated"><img src="images/portofiltre.png" alt="Kahve Hakkında Bilgilendirme"></figure>
-            <div class="content">
-              <ul>
-                <li><a href="javascript:void(0)">HABER</a></li>
-              </ul>
-              <span>13.12.2024</span>
-              <h2><a href="/haber-duyuru/1" style="color:#fff !important;">Kahve Hakkında Bilgilendirme</a></h2>
-            </div>
-            <!-- end content --> 
-          </div>
-          <!-- end recent-news --> 
-        </div>
-            
-        <!-- end col-6 -->
-        <div class="col-12 spacing-50"></div>
-        <!-- end col-12 -->
-        <div class="col-12 text-center"> <a href="/haber-duyuru" class="custom-button" style="background:#56453E !important; color:#fff !important; border:2px solid #fff !important;">Tümünü Gör</a> </div>
-        <!-- end col-12 --> 
-      </div>
-      <!-- end row --> 
-    </div>
-    <!-- end container --> 
-  </section>
-<!-- end content-section -->
-
-
-
-<section class="content-section no-spacing" data-background="#c5ad86">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="footer-bar">
-                    <i class="lni lni-protection"></i>
-                    <h6>Müşteri Hizmetlerimiz</h6>
-                    <strong>0850 123 4567</strong>
-                    <figure><img src="images/logo.png" alt="Image" style="filter:brightness(0) invert(1)">
+              <div class="carousel-image-box">
+                <div class="swiper-wrapper">
+                  <a href="/urunler/special-blend" class="swiper-slide">
+                    <figure class="reveal-effect">
+                      <img
+                        src="images/hizmetler1.jpeg"
+                        alt="Image"
+                        style="max-height: 450px; object-fit: cover"
+                      />
                     </figure>
+                    <div class="service-title" style="color: #fff !important">
+                      <h5
+                        style="
+                          color: #fff !important;
+                          font-size: 28px;
+                          font-weight: bold;
+                          margin-top: 15px;
+                          text-align: center;
+                        "
+                      >
+                        Tedarik
+                      </h5>
+                    </div>
+                  </a>
+                  <a href="/urunler/ethiopia-yirgacheffe" class="swiper-slide">
+                    <figure class="reveal-effect">
+                      <img
+                        src="images/hizmetler2.jpeg"
+                        alt="Image"
+                        style="max-height: 450px; object-fit: cover"
+                      />
+                    </figure>
+                    <div class="service-title" style="color: #fff !important">
+                      <h5
+                        style="
+                          color: #fff !important;
+                          font-size: 28px;
+                          font-weight: bold;
+                          margin-top: 15px;
+                          text-align: center;
+                        "
+                      >
+                        Danışmanlık
+                      </h5>
+                    </div>
+                  </a>
+                  <a href="/urunler/colombia-supremo" class="swiper-slide">
+                    <figure class="reveal-effect">
+                      <img
+                        src="images/hizmetler3.jpeg"
+                        alt="Image"
+                        style="max-height: 450px; object-fit: cover"
+                      />
+                    </figure>
+                    <div class="service-title" style="color: #fff !important">
+                      <h5
+                        style="
+                          color: #fff !important;
+                          font-size: 28px;
+                          font-weight: bold;
+                          margin-top: 15px;
+                          text-align: center;
+                        "
+                      >
+                        Eğitim
+                      </h5>
+                    </div>
+                  </a>
                 </div>
-                <!-- end footer-bar -->
+              </div>
+              <!-- end carousel-image-box -->
+              <div class="swiper-scrollbar"></div>
             </div>
             <!-- end col-12 -->
+          </div>
+          <!-- end row -->
         </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</section>
+        <!-- end container -->
+      </section>
 
-        <!-- end content-section -->
-        <footer class="footer" style="background:#000 !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="images/kenar-logo.png" alt="" style="max-height:180px;margin:15px 0px">
-                        <p>En taze kahve çekirdekleri ve özel harmanlarımızla, kahve tutkunlarını buluşturuyoruz.</p>
-                    </div>
-                    <!-- end col-4 -->
-                    <div class="col-xl-3 col-lg-1"></div>
-                    <!-- end col-3 -->
-                    <div class="col-xl-3 col-lg-3">
-                        <h6 class="widget-title">İletişim</h6>
-                        <p>info@coffemerch.com<br> 0850 123 4567<br><a
-                                href="https://www.google.com/maps/search/?api=1&amp;query=Coffemerch"
-                                data-fancybox="" data-width="640" data-height="360">Haritada Gör</a></p>
-                    </div>
-                    <!-- end col-3 -->
-                    <div class="col-xl-2 col-lg-4">
-                        <h6 class="widget-title">Adres</h6>
-                        <p>Barista Sokak No: 12, İzmit - Kocaeli    </p>
-                    </div>
-                    <!-- end col-2 -->
-                    <div class="col-12">
-                        <div class="bottom-bar"><span>© 2023 Coffemerch</span>
-                            <ul class="footer-social">
-                                                                <li><a href="#">Facebook</a></li>
-                                                                                                <li><a href="#">Twitter</a></li>
-                                                                                                <li><a href="#">Linkedin</a></li>
-                                                                                                <li><a href="#">Instagram</a></li>
-                                                            </ul>
-                            <!-- end footer-social -->
-                        </div>
-                        <!-- end bottom-bar -->
-                    </div>
-                    <!-- end col-12 -->
-                </div>
-                <!-- end row -->
+      <section class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title text-center">
+                <h6>Coffemerch</h6>
+                <h2>Haberler / Duyurular</h2>
+              </div>
+              <!-- end section-title -->
             </div>
-            <!-- end container -->
-        </footer>
-        <!-- end footer -->
+            <!-- end col-12 -->
+            <div class="col-md-4">
+              <div class="recent-news">
+                <figure class="reveal-effect animated">
+                  <img
+                    src="images/danismanlik2.jpg"
+                    alt="Kahve Tadım Etkinliği"
+                  />
+                </figure>
+                <div class="content">
+                  <ul>
+                    <li><a href="javascript:void(0)">HABER</a></li>
+                  </ul>
+                  <span>28.03.2025</span>
+                  <h2>
+                    <a href="/haber-duyuru/5" style="color: #fff !important"
+                      >Kahve Tadım Etkinliği</a
+                    >
+                  </h2>
+                </div>
+                <!-- end content -->
+              </div>
+              <!-- end recent-news -->
+            </div>
+            <div class="col-md-4">
+              <div class="recent-news">
+                <figure class="reveal-effect animated">
+                  <img
+                    src="images/iletisim.jpg"
+                    alt="Yeni Çekirdekler Stokta"
+                  />
+                </figure>
+                <div class="content">
+                  <ul>
+                    <li><a href="javascript:void(0)">HABER</a></li>
+                  </ul>
+                  <span>28.12.2024</span>
+                  <h2>
+                    <a href="/haber-duyuru/4" style="color: #fff !important"
+                      >Yeni Çekirdekler Stokta</a
+                    >
+                  </h2>
+                </div>
+                <!-- end content -->
+              </div>
+              <!-- end recent-news -->
+            </div>
+            <div class="col-md-4">
+              <div class="recent-news">
+                <figure class="reveal-effect animated">
+                  <img
+                    src="images/portofiltre.png"
+                    alt="Kahve Hakkında Bilgilendirme"
+                  />
+                </figure>
+                <div class="content">
+                  <ul>
+                    <li><a href="javascript:void(0)">HABER</a></li>
+                  </ul>
+                  <span>13.12.2024</span>
+                  <h2>
+                    <a href="/haber-duyuru/1" style="color: #fff !important"
+                      >Kahve Hakkında Bilgilendirme</a
+                    >
+                  </h2>
+                </div>
+                <!-- end content -->
+              </div>
+              <!-- end recent-news -->
+            </div>
+
+            <!-- end col-6 -->
+            <div class="col-12 spacing-50"></div>
+            <!-- end col-12 -->
+            <div class="col-12 text-center">
+              <a
+                href="/haber-duyuru"
+                class="custom-button"
+                style="
+                  background: #56453e !important;
+                  color: #fff !important;
+                  border: 2px solid #fff !important;
+                "
+                >Tümünü Gör</a
+              >
+            </div>
+            <!-- end col-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- end content-section -->
+
+      <section class="content-section no-spacing" data-background="#c5ad86">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-bar">
+                <i class="lni lni-protection"></i>
+                <h6>Müşteri Hizmetlerimiz</h6>
+                <strong>0850 123 4567</strong>
+                <figure>
+                  <img
+                    src="images/logo.png"
+                    alt="Image"
+                    style="filter: brightness(0) invert(1)"
+                  />
+                </figure>
+              </div>
+              <!-- end footer-bar -->
+            </div>
+            <!-- end col-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </section>
+
+      <!-- end content-section -->
+      <footer class="footer" style="background: #000 !important">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <img
+                src="images/kenar-logo.png"
+                alt=""
+                style="max-height: 180px; margin: 15px 0px"
+              />
+              <p>
+                En taze kahve çekirdekleri ve özel harmanlarımızla, kahve
+                tutkunlarını buluşturuyoruz.
+              </p>
+            </div>
+            <!-- end col-4 -->
+            <div class="col-xl-3 col-lg-1"></div>
+            <!-- end col-3 -->
+            <div class="col-xl-3 col-lg-3">
+              <h6 class="widget-title">İletişim</h6>
+              <p>
+                info@coffemerch.com<br />
+                0850 123 4567<br /><a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Coffemerch"
+                  data-fancybox=""
+                  data-width="640"
+                  data-height="360"
+                  >Haritada Gör</a
+                >
+              </p>
+            </div>
+            <!-- end col-3 -->
+            <div class="col-xl-2 col-lg-4">
+              <h6 class="widget-title">Adres</h6>
+              <p>Barista Sokak No: 12, İzmit - Kocaeli</p>
+            </div>
+            <!-- end col-2 -->
+            <div class="col-12">
+              <div class="bottom-bar">
+                <span>© 2023 Coffemerch</span>
+                <ul class="footer-social">
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Linkedin</a></li>
+                  <li><a href="#">Instagram</a></li>
+                </ul>
+                <!-- end footer-social -->
+              </div>
+              <!-- end bottom-bar -->
+            </div>
+            <!-- end col-12 -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </footer>
+      <!-- end footer -->
     </main>
     <!-- JS FILES -->
     <script src="https://sariyerborek.com/js/jquery.min.js"></script>
@@ -454,28 +669,27 @@
     <script src="https://sariyerborek.com/js/TweenMax.min.js"></script>
     <script src="https://sariyerborek.com/js/scripts.js"></script>
     <script>
-    function kesfetScrollHandler(e) {
-      e.preventDefault();
-      const target = document.getElementById('kesfet-hedef');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+      function kesfetScrollHandler(e) {
+        e.preventDefault();
+        const target = document.getElementById("kesfet-hedef");
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
       }
-    }
-    function addKesfetListeners() {
-      document.querySelectorAll('a[href="#kesfet-hedef"]').forEach(btn => {
-        btn.removeEventListener('click', kesfetScrollHandler);
-        btn.addEventListener('click', kesfetScrollHandler);
-      });
-    }
-    addKesfetListeners();
-    document.addEventListener('DOMContentLoaded', addKesfetListeners);
-    if (window.Swiper) {
-      var mainSlider = document.querySelector('.main-slider')?.swiper;
-      if (mainSlider) {
-        mainSlider.on('slideChange', addKesfetListeners);
+      function addKesfetListeners() {
+        document.querySelectorAll('a[href="#kesfet-hedef"]').forEach((btn) => {
+          btn.removeEventListener("click", kesfetScrollHandler);
+          btn.addEventListener("click", kesfetScrollHandler);
+        });
       }
-    }
+      addKesfetListeners();
+      document.addEventListener("DOMContentLoaded", addKesfetListeners);
+      if (window.Swiper) {
+        var mainSlider = document.querySelector(".main-slider")?.swiper;
+        if (mainSlider) {
+          mainSlider.on("slideChange", addKesfetListeners);
+        }
+      }
     </script>
-    </body>
-
+  </body>
 </html>
