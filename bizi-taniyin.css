@@ -49,7 +49,7 @@ body {
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
   color: #c5ad86;
@@ -86,13 +86,13 @@ body {
 }
 
 .story-text h3 {
-  font-size: 32px;
+  font-size: 28px;
   color: #c5ad86;
   margin-bottom: 20px;
 }
 
 .story-text p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #e0e0e0;
@@ -140,13 +140,13 @@ body {
 }
 
 .mission-text h3 {
-  font-size: 32px;
+  font-size: 28px;
   color: #c5ad86;
   margin-bottom: 20px;
 }
 
 .mission-text p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #e0e0e0;
@@ -194,13 +194,13 @@ body {
 }
 
 .team-text h3 {
-  font-size: 32px;
+  font-size: 28px;
   color: #c5ad86;
   margin-bottom: 20px;
 }
 
 .team-text p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #e0e0e0;
@@ -283,7 +283,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .story-content {
