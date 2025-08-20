@@ -1,0 +1,402 @@
+/* Horizontal Scroll Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #121212;
+  color: #ffffff;
+}
+
+.horizontal-scroll-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+
+.scroll-section:nth-child(1) {
+  transform: translateX(0);
+}
+
+.scroll-section:nth-child(2) {
+  transform: translateX(100vw);
+}
+
+.scroll-section:nth-child(3) {
+  transform: translateX(200vw);
+}
+
+.section-content {
+  max-width: 1000px;
+  text-align: center;
+  padding: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #c5ad86;
+  font-family: "Georgia", serif;
+}
+
+/* Story Section */
+.story-section {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+}
+
+.story-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/slider2.jpeg") center center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.story-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.story-text {
+  flex: 1;
+  text-align: left;
+}
+
+.story-text h3 {
+  font-size: 32px;
+  color: #c5ad86;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.story-image {
+  flex: 1;
+  text-align: center;
+}
+
+.story-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Mission Section */
+.mission-section {
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+}
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/bizitaniyin.jpeg") center center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.mission-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.mission-text {
+  flex: 1;
+  text-align: left;
+}
+
+.mission-text h3 {
+  font-size: 32px;
+  color: #c5ad86;
+  margin-bottom: 20px;
+}
+
+.mission-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.mission-image {
+  flex: 1;
+  text-align: center;
+}
+
+.mission-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Team Section */
+.team-section {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+}
+
+.team-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/hizmetler1.jpeg") center center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.team-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.team-text {
+  flex: 1;
+  text-align: left;
+}
+
+.team-text h3 {
+  font-size: 32px;
+  color: #c5ad86;
+  margin-bottom: 20px;
+}
+
+.team-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.team-image {
+  flex: 1;
+  text-align: center;
+}
+
+.team-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.indicator-dots {
+  display: flex;
+  gap: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #c5ad86;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: #c5ad86;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(197, 173, 134, 0.2);
+  border: none;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-arrow:hover {
+  background: rgba(197, 173, 134, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+  left: 30px;
+}
+
+.next-arrow {
+  right: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .story-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .prev-arrow {
+    left: 15px;
+  }
+
+  .next-arrow {
+    right: 15px;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sayfa Yükleme Animasyonu */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100vw;
+  background: #56453e;
+  z-index: 9999;
+  animation: pageBarDownUp 3s ease-in-out forwards;
+}
+
+@keyframes pageBarDownUp {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+/* Sayfa Kapanış Animasyonu */
+@keyframes pageBarUpDown {
+  0% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+  50% {
+    height: 100vh;
+    bottom: 0;
+    top: auto;
+  }
+  100% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+}
+
+/* Sayfa Kapanış Loader */
+#page-close-loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100vw;
+  background: #56453e;
+  z-index: 9999;
+  display: none;
+}
+
+#page-close-loader.active {
+  display: block;
+  animation: pageBarUpDown 1.5s ease-in-out forwards;
+}
+
+/* Sayfa içeriklerini başlangıçta gizle */
+body:not(.content-loaded) > *:not(#page-loader) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Sayfa yükleme tamamlandığında içerikleri göster */
+body.content-loaded > *:not(#page-loader) {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}

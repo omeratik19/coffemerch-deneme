@@ -69,93 +69,149 @@
       .contact-cards {
         display: flex;
         justify-content: center;
-        align-items: stretch;
-        gap: 0;
-        margin-top: 30px;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50px;
         flex-wrap: wrap;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
         background: transparent;
+        position: relative;
       }
+
       .contact-card {
-        flex: 1 1 0;
-        min-width: 220px;
-        max-width: 100%;
-        background: #fff !important;
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        background: transparent !important;
         color: #56453e !important;
-        border-left: none;
-        border-right: none;
-        box-shadow: none;
-        padding: 32px 10px 24px 10px;
+        padding: 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-radius: 16px;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        text-align: center;
+        position: relative;
+        transition: all 0.3s ease;
       }
-      .contact-card:first-child {
-        border-left: none;
+
+      .contact-card::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #56453e, #8b7bb8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 25px rgba(86, 69, 62, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1;
       }
-      .contact-card:last-child {
-        border-right: none;
+
+      .contact-card:hover::before {
+        transform: translateX(-50%) scale(1.1);
+        box-shadow: 0 12px 35px rgba(86, 69, 62, 0.4);
       }
-      .contact-card h3,
-      .contact-card p {
-        color: #56453e !important;
+
+      .contact-card:nth-child(1)::before {
+        background: linear-gradient(135deg, #56453e, #d4af37);
       }
+
+      .contact-card:nth-child(2)::before {
+        background: linear-gradient(135deg, #56453e, #8b7bb8);
+      }
+
+      .contact-card:nth-child(3)::before {
+        background: linear-gradient(135deg, #56453e, #764ba2);
+      }
+
       .contact-card h3 {
-        font-size: 1.3rem;
-        font-weight: 500;
-        margin-bottom: 10px;
-        font-family: "Quicksand", Arial, sans-serif;
-      }
-      .contact-card p {
-        font-size: 1.1rem;
-        margin: 0 0 8px 0;
-        font-weight: bold;
-        font-family: "Quicksand", Arial, sans-serif;
-      }
-      .contact-card:nth-child(1) p, /* Numara */
-      .contact-card:nth-child(2) p, /* E-posta */
-      .contact-social a,
-      .contact-social a i {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 50px 0 15px 0;
         color: #56453e !important;
+        font-family: "Quicksand", Arial, sans-serif;
+        position: relative;
+        z-index: 2;
       }
+
+      .contact-card p {
+        font-size: 1.2rem;
+        margin: 0 0 20px 0;
+        font-weight: 500;
+        font-family: "Quicksand", Arial, sans-serif;
+        color: #56453e !important;
+        position: relative;
+        z-index: 2;
+        line-height: 1.4;
+      }
+
+      .contact-card:nth-child(1) p,
+      .contact-card:nth-child(2) p {
+        color: #56453e !important;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
       .contact-social {
-        font-size: 1.7rem;
-        margin-top: 8px;
+        font-size: 1.8rem;
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
       }
+
       .contact-social a {
         color: #56453e !important;
         margin: 0 8px;
-        transition: color 0.2s;
+        transition: all 0.3s ease;
+        display: inline-block;
       }
+
       .contact-social a:hover {
         color: #d4af37;
+        transform: translateY(-3px) scale(1.1);
       }
+
       .contact-social a i {
         color: #56453e !important;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
       }
+
+      /* Alt çizgi efekti */
+      .contact-card::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #56453e, #8b7bb8);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+      }
+
+      .contact-card:hover::after {
+        width: 80%;
+      }
+
       @media (max-width: 900px) {
         .contact-cards {
           flex-direction: column;
-          gap: 0;
+          gap: 60px;
         }
         .contact-card {
-          border-left: none;
-          border-right: none;
-          border-top: 1px solid #eee;
-          border-bottom: 1px solid #eee;
           max-width: 100%;
+          min-width: 280px;
         }
-        .contact-card:first-child {
-          border-top: none;
-        }
-        .contact-card:last-child {
-          border-bottom: none;
+        .contact-card::before {
+          width: 70px;
+          height: 70px;
         }
       }
 
@@ -190,7 +246,7 @@
       .contact-form {
         max-width: 800px;
         margin: 0 auto;
-        background: #fff !important;
+        background: transparent;
         padding: 48px 32px 40px 32px;
         border-radius: 18px;
         box-shadow: 0 8px 32px rgba(76, 68, 182, 0.1);
@@ -421,14 +477,34 @@
       <div class="desc">Tüm soru ve sorunlarınız için her zaman müsaitiz.</div>
       <div class="contact-cards">
         <div class="contact-card">
-          <h3>Hemen Ara</h3>
-          <p>+90 530 655 7210</p>
-        </div>
-        <div class="contact-card">
+          <i
+            class="fas fa-envelope"
+            style="
+              position: absolute;
+              top: -5px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: #fff;
+              font-size: 1.2rem;
+              z-index: 3;
+            "
+          ></i>
           <h3>E-Posta</h3>
           <p>info@coffemerch.com</p>
         </div>
         <div class="contact-card">
+          <i
+            class="fas fa-heart"
+            style="
+              position: absolute;
+              top: -5px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: #fff;
+              font-size: 1.2rem;
+              z-index: 3;
+            "
+          ></i>
           <h3>Bizi Takip Edin</h3>
           <div class="contact-social">
             <a
@@ -463,11 +539,6 @@
               <label for="email">E-posta *</label>
               <input type="email" id="email" name="email" required />
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" />
           </div>
 
           <div class="form-group">

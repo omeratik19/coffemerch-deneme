@@ -1,0 +1,763 @@
+/* Hizmetlerimiz Page Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Banner */
+.top-banner {
+  background: transparent;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px 0 0;
+}
+
+.banner-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.banner-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.banner-nav a:hover {
+  color: #56453e;
+}
+
+.mobile-menu {
+  display: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu.active {
+  color: #56453e;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #56453e;
+}
+
+.close-menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Hero Section - Kahve Danışmanlığı */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/hizmetler2.jpeg") center center/cover no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  margin-left: -90px;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #c5ad86;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #56453e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-features {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #c5ad86;
+}
+
+.feature span {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #56453e, #8b7355);
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+  border: none;
+  box-shadow: 0 10px 30px rgba(86, 69, 62, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #8b7355, #56453e);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(86, 69, 62, 0.6);
+}
+
+/* Services Section */
+.services-section {
+  padding: 150px 0;
+  background: #0f0f0f;
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/portofiltre.png") center center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #c5ad86;
+  margin-bottom: 80px;
+  font-weight: 700;
+}
+
+/* Primary Service: Kahve Danışmanlığı */
+.primary-service {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 100px;
+  padding: 60px;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/portofiltre.png") center center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  z-index: 3;
+  position: relative;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.service-content h3 {
+  font-size: 2.5rem;
+  color: #c5ad86;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.service-details {
+  margin-bottom: 40px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.detail-item i {
+  color: #56453e;
+  font-size: 1.2rem;
+}
+
+.detail-item span {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.service-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c5ad86;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.service-cta {
+  display: inline-block;
+  background: #56453e;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #56453e;
+}
+
+.service-cta:hover {
+  background: transparent;
+  color: #56453e;
+  transform: translateY(-2px);
+}
+
+.service-content {
+  margin-bottom: 100px;
+}
+
+/* Secondary Service: Kahve Çekirdeği Satışı */
+.secondary-service {
+  padding: 60px;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.secondary-service h3 {
+  font-size: 2rem;
+  color: #c5ad86;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.secondary-service .service-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.coffee-varieties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.variety {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.variety h4 {
+  color: #c5ad86;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.variety p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.service-cta.secondary {
+  background: transparent;
+  color: #56453e;
+  border-color: #56453e;
+}
+
+.service-cta.secondary:hover {
+  background: #56453e;
+  color: #fff;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  text-align: center;
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  color: #c5ad86;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-cta {
+  background: #56453e;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #56453e;
+}
+
+.primary-cta:hover {
+  background: transparent;
+  color: #56453e;
+  transform: translateY(-2px);
+}
+
+.secondary-cta {
+  background: transparent;
+  color: #56453e;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #56453e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.secondary-cta:hover {
+  background: #56453e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Page Loader */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100vw;
+  background: #56453e;
+  z-index: 9999;
+  animation: pageBarDownUp 3s ease-in-out forwards;
+}
+
+@keyframes pageBarDownUp {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+/* Sayfa Kapanış Animasyonu */
+@keyframes pageBarUpDown {
+  0% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+  50% {
+    height: 100vh;
+    bottom: 0;
+    top: auto;
+  }
+  100% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+}
+
+/* Page Close Loader */
+#page-close-loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100vw;
+  background: #56453e;
+  z-index: 9999;
+  display: none;
+}
+
+#page-close-loader.active {
+  display: block;
+  animation: pageBarUpDown 2.5s ease-in-out forwards;
+}
+
+@keyframes pageBarUpDown {
+  0% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+  50% {
+    height: 100vh;
+    bottom: 0;
+    top: auto;
+  }
+  100% {
+    height: 0;
+    bottom: 0;
+    top: auto;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .feature {
+    flex-direction: row;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .cta-button {
+    padding: 18px 35px;
+    font-size: 1.1rem;
+  }
+
+  .services-section {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+
+  .service-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .service-text {
+    text-align: center;
+  }
+
+  .service-content h3 {
+    font-size: 2rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+
+  .service-details {
+    text-align: left;
+  }
+
+  .detail-item {
+    justify-content: flex-start;
+  }
+
+  .service-stats {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .service-cta {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .banner-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .banner-content {
+    padding: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 80px 15px 40px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .service-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .detail-item {
+    font-size: 0.9rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
