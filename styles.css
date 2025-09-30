@@ -125,6 +125,7 @@ body {
 @media (max-width: 768px) {
   .banner-content {
     padding: 0 20px;
+    padding-right: 20px;
   }
 
   .banner-nav {
@@ -135,16 +136,83 @@ body {
     display: block;
   }
 
+  .hero-section {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
   .hero-title {
     font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
 
   .hero-subtitle {
     font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .hero-description {
     font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  /* Header mobile adjustments */
+  header.regular {
+    padding: 15px 0;
+  }
+
+  .menu-nav {
+    padding: 0 20px;
+  }
+
+  .menu-button {
+    padding: 8px;
+  }
+
+  .menu-button .bar {
+    width: 20px;
+    height: 2px;
+    margin: 4px 0;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .banner-content {
+    padding: 0 15px;
+    padding-right: 15px;
+  }
+
+  header.regular {
+    padding: 10px 0;
+  }
+
+  .menu-nav {
+    padding: 0 15px;
   }
 }
 
@@ -200,5 +268,93 @@ body {
 
   .bubble-link i {
     font-size: 16px;
+  }
+
+  .bubble-link span {
+    display: none;
+  }
+
+  .bubble-link:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 480px) {
+  .consultation-bubble {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .bubble-link {
+    padding: 10px 12px;
+    font-size: 11px;
+    border-radius: 40px;
+  }
+
+  .bubble-link i {
+    font-size: 14px;
+  }
+}
+
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .menu-content {
+    padding: 40px 20px;
+  }
+
+  .link-list {
+    padding: 0;
+  }
+
+  .primary {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .primary span {
+    font-size: 18px;
+  }
+
+  .dropdown {
+    margin-top: 10px;
+  }
+
+  .dropdown a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .menu-footer {
+    padding: 20px;
+  }
+
+  .menu-footer .left,
+  .menu-footer .mid,
+  .menu-footer .right {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .menu-footer .accent-text {
+    font-size: 14px;
+  }
+
+  /* Mobile performance optimizations */
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  /* Improve touch interactions */
+  .menu-button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bubble-link {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
   }
 }

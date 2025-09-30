@@ -282,23 +282,99 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .horizontal-scroll-container {
+    height: 100vh;
+  }
+
+  .scroll-section {
+    padding: 15px;
+  }
+
+  .section-content {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
   .section-title {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 25px;
   }
 
   .story-content {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .story-text {
+    text-align: center;
+  }
+
+  .story-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .story-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .story-image img {
+    max-width: 250px;
   }
 
   .mission-content {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .mission-text {
+    text-align: center;
+  }
+
+  .mission-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .mission-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .mission-image img {
+    max-width: 250px;
   }
 
   .team-content {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .team-text {
+    text-align: center;
+  }
+
+  .team-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .team-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .team-image img {
+    max-width: 250px;
   }
 
   .nav-arrow {
@@ -313,6 +389,133 @@ body {
 
   .next-arrow {
     right: 15px;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+
+  .indicator-dots {
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .section-content {
+    padding: 15px 10px;
+  }
+
+  .story-text h3,
+  .mission-text h3,
+  .team-text h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .story-text p,
+  .mission-text p,
+  .team-text p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .story-image img,
+  .mission-image img,
+  .team-image img {
+    max-width: 200px;
+  }
+
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .prev-arrow {
+    left: 10px;
+  }
+
+  .next-arrow {
+    right: 10px;
+  }
+
+  .scroll-indicator {
+    bottom: 15px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Touch device improvements */
+@media (max-width: 768px) and (pointer: coarse) {
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  /* Improve scrolling performance */
+  .horizontal-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Optimize animations for mobile */
+  .scroll-section {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-arrow {
+    transition: all 0.2s ease;
+  }
+
+  .dot {
+    transition: all 0.2s ease;
+  }
+
+  /* Prevent zoom on input focus */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Improve touch targets */
+  .nav-arrow,
+  .dot {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-arrow {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 

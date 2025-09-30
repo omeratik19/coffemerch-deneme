@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
     <meta name="theme-color" content="#c5ad86" />
     <title>Coffemerch</title>
@@ -67,6 +67,106 @@
         margin: 5px 0;
         transition: 0.3s;
         display: block;
+      }
+
+      /* Mobile responsive styles */
+      @media (max-width: 768px) {
+        header.regular {
+          padding: 15px 0;
+        }
+
+        .menu-nav {
+          padding: 0 20px;
+        }
+
+        .menu-button {
+          padding: 8px;
+        }
+
+        .menu-button .bar {
+          width: 20px;
+          height: 2px;
+          margin: 4px 0;
+        }
+
+        .menu-content {
+          padding: 40px 20px;
+        }
+
+        .link-list {
+          padding: 0;
+        }
+
+        .primary {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .primary span {
+          font-size: 18px;
+        }
+
+        .dropdown {
+          margin-top: 10px;
+        }
+
+        .dropdown a {
+          font-size: 16px;
+          padding: 8px 0;
+        }
+
+        .menu-footer {
+          padding: 20px;
+        }
+
+        .menu-footer .left,
+        .menu-footer .mid,
+        .menu-footer .right {
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .menu-footer .accent-text {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header.regular {
+          padding: 10px 0;
+        }
+
+        .menu-nav {
+          padding: 0 15px;
+        }
+
+        .menu-button {
+          padding: 6px;
+        }
+
+        .menu-button .bar {
+          width: 18px;
+          height: 2px;
+          margin: 3px 0;
+        }
+
+        .menu-content {
+          padding: 30px 15px;
+        }
+
+        .primary {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+
+        .primary span {
+          font-size: 16px;
+        }
+
+        .dropdown a {
+          font-size: 14px;
+          padding: 6px 0;
+        }
       }
     </style>
   </head>
