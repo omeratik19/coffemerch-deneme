@@ -8,6 +8,53 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="//onyxcoffeelab.com/cdn/shop/t/31/assets/shell.css?v=158873479618940135961754579674"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="//onyxcoffeelab.com/cdn/shop/t/31/assets/theme.css?v=96081679368584200091754579608"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <style>
+      header.regular {
+        background: transparent !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 20px 0;
+      }
+
+      .menu-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .menu-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+      }
+
+      .menu-button .bar {
+        width: 25px;
+        height: 2px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.3s;
+        display: block;
+      }
+    </style>
     <style>
       * {
         margin: 0;
@@ -249,6 +296,87 @@
     <!-- Sayfa Yükleme Animasyonu -->
     <div id="page-loader"></div>
 
+    <header class="regular">
+      <div class="container">
+        <div class="menu-nav">
+          <div class="menu-button" style="margin-left: auto">
+            <div class="bar top wipe-in wipe-delay-03"></div>
+            <div class="bar mid wipe-in wipe-delay-04"></div>
+            <div class="bar bottom wipe-in wipe-delay-05"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <div class="menu-wipe"></div>
+      <div class="menu-content">
+        <div class="link-list container">
+          <div class="search mobile-only">
+            <form action="/search" method="GET">
+              <input name="q" placeholder="Search..." />
+              <input type="submit" style="display: none" />
+            </form>
+          </div>
+
+          <span class="primary has-children room-205">
+            <span>Coffee</span>
+            <hr />
+            <div class="dropdown">
+              <a href="urunler.html">Tüm Kahve Çekirdekleri</a>
+              <a href="urunler.html">Özel Paketler</a>
+              <a href="urunler.html">Abonelikler</a>
+            </div>
+          </span>
+
+          <span class="primary has-children room-205">
+            <span>Hizmetler</span>
+            <hr />
+            <div class="dropdown">
+              <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+              <a href="hizmetlerimizv2.html">Hizmetlerimiz v2</a>
+              <a href="iletisim.html">İletişim</a>
+            </div>
+          </span>
+
+          <span class="primary has-children room-205">
+            <span>Kurumsal</span>
+            <hr />
+            <div class="dropdown">
+              <a href="bizi-taniyin.html">Bizi Tanıyın</a>
+              <a href="kurumsal.html">Kurumsal</a>
+            </div>
+          </span>
+
+          <div class="big-links"></div>
+        </div>
+        <div class="menu-footer container">
+          <div>
+            <div class="left">
+              <span class="accent-text">Never Settle for Good Enough</span>
+              <div class="social"></div>
+            </div>
+
+            <div class="mid">
+              <a class="accent-text" href="mailto:info@coffemerch.com"
+                >Sorunuz mu Var?</a
+              >
+              <a class="accent-text" href="iletisim.html">İletişim</a>
+              <a class="accent-text" href="mailto:info@coffemerch.com"
+                >Bize E-posta Gönderin</a
+              >
+            </div>
+
+            <div class="right">
+              <a class="accent-text" href="iletisim.html"
+                >Acele mi ediyorsunuz?</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Header -->
     <div class="header">
       <div class="container">
@@ -455,6 +583,22 @@
             });
           });
         });
+      });
+
+      $(".menu-button").click(function () {
+        if ($(".menu").hasClass("active")) {
+          $(".menu-button").removeClass("active");
+          $(".menu").removeClass("active");
+          $("header").removeClass("force-dark");
+          $("body").removeClass("menu-open");
+          $("body").css("overflow", "scroll");
+        } else {
+          $(".menu-button").addClass("active");
+          $(".menu").addClass("active");
+          $("header").addClass("force-dark");
+          $("body").addClass("menu-open");
+          $("body").css("overflow", "hidden");
+        }
       });
     </script>
   </body>
